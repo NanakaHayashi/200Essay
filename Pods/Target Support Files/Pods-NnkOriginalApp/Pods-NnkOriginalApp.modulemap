@@ -1,0 +1,6 @@
+framework module Pods_NnkOriginalApp {
+  umbrella header "Pods-NnkOriginalApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

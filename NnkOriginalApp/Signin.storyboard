@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CC9-re-9la">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="font_1_honokamin.ttf">
+            <string>Honoka-Mincho</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--ログイン-->
+        <scene sceneID="OTf-e3-Dm3">
+            <objects>
+                <viewController storyboardIdentifier="RootNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Orp-Hn-6FC" customClass="LoginViewController" customModule="_00Essay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oMS-vP-mkc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザーID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8lC-I9-rDj">
+                                <rect key="frame" x="54" y="125" width="306" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="qo4-a4-9oB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CsY-WP-cJn">
+                                <rect key="frame" x="54" y="181" width="306" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="nA3-fP-HOr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アカウントをお持ちでない方は" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCh-VZ-msq">
+                                <rect key="frame" x="54" y="426" width="306" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="zSh-yG-P39"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Honoka-Mincho" family="Honoka Mincho" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVS-C3-wDh">
+                                <rect key="frame" x="54" y="468" width="306" height="58"/>
+                                <color key="backgroundColor" red="0.6705882353" green="0.80784313730000001" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="YHe-1X-TIs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Honoka-Mincho" family="Honoka Mincho" pointSize="17"/>
+                                <state key="normal" title="新規会員登録">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Euo-sF-Kql" kind="show" id="R8P-Ta-KJU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKM-HK-f3v">
+                                <rect key="frame" x="54" y="263" width="306" height="33"/>
+                                <color key="backgroundColor" red="0.6705882353" green="0.80784313730000001" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="jw9-ks-pqa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Honoka-Mincho" family="Honoka Mincho" pointSize="21"/>
+                                <state key="normal" title="ログイン">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="signIn" destination="Orp-Hn-6FC" eventType="touchUpInside" id="HHm-eg-DMT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SKM-HK-f3v" firstAttribute="top" secondItem="CsY-WP-cJn" secondAttribute="bottom" constant="48" id="2B6-lH-Zu4"/>
+                            <constraint firstItem="Vz9-uB-6xO" firstAttribute="trailing" secondItem="8lC-I9-rDj" secondAttribute="trailing" constant="54" id="3MK-HK-Lfi"/>
+                            <constraint firstItem="8lC-I9-rDj" firstAttribute="leading" secondItem="Vz9-uB-6xO" secondAttribute="leading" constant="54" id="6yM-4T-iij"/>
+                            <constraint firstItem="Vz9-uB-6xO" firstAttribute="trailing" secondItem="CsY-WP-cJn" secondAttribute="trailing" constant="54" id="E2I-X2-jTV"/>
+                            <constraint firstItem="Vz9-uB-6xO" firstAttribute="trailing" secondItem="DVS-C3-wDh" secondAttribute="trailing" constant="54" id="EfZ-Uo-J2v"/>
+                            <constraint firstItem="8lC-I9-rDj" firstAttribute="top" secondItem="Vz9-uB-6xO" secondAttribute="top" constant="37" id="FEI-PQ-Rsk"/>
+                            <constraint firstItem="Vz9-uB-6xO" firstAttribute="trailing" secondItem="VCh-VZ-msq" secondAttribute="trailing" constant="54" id="HCe-cq-NaS"/>
+                            <constraint firstItem="SKM-HK-f3v" firstAttribute="leading" secondItem="Vz9-uB-6xO" secondAttribute="leading" constant="54" id="LWf-pl-a9x"/>
+                            <constraint firstItem="CsY-WP-cJn" firstAttribute="leading" secondItem="Vz9-uB-6xO" secondAttribute="leading" constant="54" id="M2k-cn-KZn"/>
+                            <constraint firstItem="Vz9-uB-6xO" firstAttribute="trailing" secondItem="SKM-HK-f3v" secondAttribute="trailing" constant="54" id="MKD-Hx-GOr"/>
+                            <constraint firstItem="DVS-C3-wDh" firstAttribute="leading" secondItem="Vz9-uB-6xO" secondAttribute="leading" constant="54" id="SEr-T8-82d"/>
+                            <constraint firstItem="CsY-WP-cJn" firstAttribute="top" secondItem="8lC-I9-rDj" secondAttribute="bottom" constant="22" id="V67-x9-ODn"/>
+                            <constraint firstItem="VCh-VZ-msq" firstAttribute="top" secondItem="SKM-HK-f3v" secondAttribute="bottom" constant="130" id="WxH-4D-Zzn"/>
+                            <constraint firstItem="DVS-C3-wDh" firstAttribute="top" secondItem="VCh-VZ-msq" secondAttribute="bottom" constant="8" id="ZH9-RQ-eP7"/>
+                            <constraint firstItem="VCh-VZ-msq" firstAttribute="leading" secondItem="Vz9-uB-6xO" secondAttribute="leading" constant="54" id="aFs-Ld-Lkc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vz9-uB-6xO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ログイン" id="gWl-O4-Bhs"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="CsY-WP-cJn" id="8cN-HB-UEk"/>
+                        <outlet property="userIdTextField" destination="8lC-I9-rDj" id="zij-vR-IGC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Be3-hJ-ltJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889.85507246376824" y="-38.839285714285715"/>
+        </scene>
+        <!--新規登録-->
+        <scene sceneID="bwW-Ne-xCV">
+            <objects>
+                <viewController id="Euo-sF-Kql" customClass="SignUpViewController" customModule="_00Essay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RZA-3P-TaP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="NH4-p3-GXk">
+                                <rect key="frame" x="37" y="120" width="340" height="366"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザーID(４文字以上)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ow4-pQ-OpT">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="6ro-J0-ZxG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1so-Si-H1z">
+                                        <rect key="frame" x="0.0" y="65" width="340" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="6at-N6-aDY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OLo-is-YCv">
+                                        <rect key="frame" x="0.0" y="130" width="340" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="XRU-yo-fsV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード（確認用）" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lpB-JO-kj4">
+                                        <rect key="frame" x="0.0" y="195" width="340" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="E8l-43-OBV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="orv-Nc-hm4">
+                                        <rect key="frame" x="0.0" y="260" width="340" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vE-4Q-Vmk">
+                                                <rect key="frame" x="0.0" y="0.0" width="340" height="35"/>
+                                                <fontDescription key="fontDescription" name="Honoka-Mincho" family="Honoka Mincho" pointSize="19"/>
+                                                <state key="normal" title="プライバシーポリシー">
+                                                    <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="url" destination="Euo-sF-Kql" eventType="touchUpInside" id="MMj-R5-nlJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="2WB-oy-qaD"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnL-Ub-Vz4">
+                                        <rect key="frame" x="0.0" y="326" width="340" height="40"/>
+                                        <color key="backgroundColor" red="0.6705882353" green="0.80784313730000001" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Czc-BR-OuG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Honoka-Mincho" family="Honoka Mincho" pointSize="17"/>
+                                        <state key="normal" title="新規登録">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signup" destination="Euo-sF-Kql" eventType="touchUpInside" id="QJF-MZ-dQT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NH4-p3-GXk" firstAttribute="top" secondItem="UJt-UF-Ywp" secondAttribute="top" constant="32" id="27f-gi-uGa"/>
+                            <constraint firstItem="UJt-UF-Ywp" firstAttribute="trailing" secondItem="NH4-p3-GXk" secondAttribute="trailing" constant="37" id="6ft-5M-z9z"/>
+                            <constraint firstItem="NH4-p3-GXk" firstAttribute="centerX" secondItem="RZA-3P-TaP" secondAttribute="centerX" id="UP4-c1-xPB"/>
+                            <constraint firstItem="NH4-p3-GXk" firstAttribute="leading" secondItem="UJt-UF-Ywp" secondAttribute="leading" constant="37" id="z3c-Yg-q5d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UJt-UF-Ywp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="新規登録" id="raf-hw-jis"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="lpB-JO-kj4" id="rw3-KN-d4p"/>
+                        <outlet property="mailTextField" destination="1so-Si-H1z" id="8op-Jj-iZQ"/>
+                        <outlet property="passwordTextField" destination="OLo-is-YCv" id="cLq-bq-Pz1"/>
+                        <outlet property="signUpButton" destination="fnL-Ub-Vz4" id="uNF-F0-hKH"/>
+                        <outlet property="userIdTextField" destination="ow4-pQ-OpT" id="oRx-F5-OqJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F9g-2D-LR5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782.608695652174" y="-40.178571428571423"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZSV-He-0ZS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CC9-re-9la" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VP9-iY-XaC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.6705882353" green="0.80784313730000001" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Orp-Hn-6FC" kind="relationship" relationship="rootViewController" id="hcS-Di-Dho"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="soL-rc-DdZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18.840579710144929" y="-38.169642857142854"/>
+        </scene>
+    </scenes>
+</document>
